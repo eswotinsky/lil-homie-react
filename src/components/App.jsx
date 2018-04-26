@@ -3,6 +3,7 @@ import Header from './Header';
 import { Switch, Route } from 'react-router-dom';
 import HomieDisplay from './HomieDisplay';
 import HomieStats from './HomieStats';
+import Buttons from './Buttons';
 import { Grid, Row, Cell } from 'react-inline-grid';
 
 function App(){
@@ -13,9 +14,10 @@ function App(){
         <Row is="start">
           <Cell is="4 offset-2" id="cellDisplay"><HomieDisplay/></Cell>
           <Cell is="2 "><HomieStats/></Cell>
-
         </Row>
+
       </Grid>
+      <Buttons/>
 
       <style jsx>{`
           #cellDisplay{
