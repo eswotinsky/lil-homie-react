@@ -19,14 +19,14 @@ function HomieDisplay(props){
             filter: drop-shadow(10px 10px 10px orange) blur(10px);
           }
           `}
-        </style>
-      </div>
-    );
-  }
+      </style>
+    </div>
+  );
+}
 
 
 HomieDisplay.propTypes = {
   homie: PropTypes.object
-}
+};
 
 export default HomieDisplay;

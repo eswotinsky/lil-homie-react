@@ -47,10 +47,10 @@ function Header(){
             animation: rainbow 5s infinite alternate;
           }
           `}
-        </style>
-        <h1>Homie Simulator</h1>
-      </div>
-    );
-  }
+      </style>
+      <h1>Homie Simulator</h1>
+    </div>
+  );
+}
 
-  export default Header;
+export default Header;

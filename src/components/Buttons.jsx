@@ -35,6 +35,6 @@ function Buttons(props) {
 
 Buttons.propTypes = {
   onIncreaseStats: PropTypes.func
-}
+};
 
 export default Buttons;
