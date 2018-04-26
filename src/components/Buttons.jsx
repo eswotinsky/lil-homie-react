@@ -23,8 +23,8 @@ function Buttons(props) {
           color: white;
           background-color: tomato;
           height: 75px;
-          width: 200px;
-          margin-right: 4.3%;
+          width: 24%;
+          margin-right: 5%;
           margin-left: 4.3%;
         }
 
