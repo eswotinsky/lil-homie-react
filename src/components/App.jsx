@@ -47,7 +47,6 @@ export class App extends React.Component {
       newHomie[stat] += 6;
       newHomie[stat] = (newHomie[stat] > 100) ? 100 : newHomie[stat];
     }
-    // console.log("This is the homie alive:" + this.state.theLilHomie.alive);
     this.setState({theLilHomie: newHomie});
   }
 
@@ -89,13 +88,16 @@ export class App extends React.Component {
             <Cell is="4 offset-2" id="cellDisplay"><HomieDisplay homie={this.state.theLilHomie}/></Cell>
             <Cell is="2 "><HomieStats homie={this.state.theLilHomie}/></Cell>
           </Row>
-
         </Grid>
         <DeathText homie={this.state.theLilHomie}
           deathOptions={this.state.deathMessages}/>
         <Buttons onIncreaseStats={this.increaseHomieStats}/>
         <DressUp onHatClick={this.handleHatClick}/>
-        <style jsx>{`
+        <style global jsx>{`
+            body {
+              background-color: bisque;
+            }
+
             #cellDisplay{
               margin-left: 20vw;
               background-color: tomato;

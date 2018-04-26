@@ -18,7 +18,6 @@ function HomieStats(props){
     h1 {
       font-family: chalkduster;
       margin-left: 5%;
-
     }
 
     div.statsContainer{
@@ -26,6 +25,8 @@ function HomieStats(props){
       width: 30vw;
       border: 5px solid black;
       background-color: tomato;
+      box-shadow: 0px 0px 25px firebrick;
+
     }
     progress {
       background-size: 100%;

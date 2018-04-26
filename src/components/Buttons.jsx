@@ -12,7 +12,7 @@ function Buttons(props) {
         div.buttonContainer {
           margin-left: 16.4%;
           margin-right: 19.4%;
-          padding-top: 3%;
+          padding-top: 1.5%;
           padding-bottom: 3%;
         }
         .btn {

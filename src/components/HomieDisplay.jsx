@@ -12,6 +12,10 @@ function HomieDisplay(props){
   return (
     <div className={props.homie.className}>
       <style jsx>{`
+          div {
+            box-shadow: 0px 0px 25px firebrick;
+          }
+
           div.alive{
             background-image: url(${lilHomie});
             background-size: 100% 100%;

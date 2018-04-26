@@ -5,15 +5,14 @@ function Header(){
     <div className="rainbow_border">
       <style jsx>{`
           div {
+            box-shadow: 0px 0px 25px firebrick;
             background-color:tomato;
             color:white;
-
-            margin-right: 19.4%;
             height: 12vh;
+            margin-right: 19.4%;
             margin-left: 16.4%;
             margin-top: 5%;
-
-
+            margin-bottom: 1.34%;
             padding: 2%;
           }
           .titleText{

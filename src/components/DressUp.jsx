@@ -18,10 +18,11 @@ function DressUp(props) {
           margin-right: 19.4%;
           height: 12vh;
           margin-left: 16.4%;
-          margin-top: 5%;
+          margin-top: 1%;
           font-family: chalkduster;
           font-size: 2.25vw;
           padding: 2%;
+          box-shadow: 0px 0px 25px firebrick;
         }
         h3 {
           margin-top:0px;
@@ -32,6 +33,9 @@ function DressUp(props) {
           padding:5px;
           margin:20px;
           background-color:bisque;
+        }
+        img:hover {
+          background-color: cornflowerblue;
         }
       `}
       </style>
