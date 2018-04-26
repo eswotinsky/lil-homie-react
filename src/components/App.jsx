@@ -4,13 +4,27 @@ import { Switch, Route } from 'react-router-dom';
 import HomieDisplay from './HomieDisplay';
 import HomieStats from './HomieStats';
 import Buttons from './Buttons';
+import DeathText from './DeathText';
 import { Grid, Row, Cell } from 'react-inline-grid';
+
+const DEATH = [
+  'Lil\' Homie has bought the farm.',
+  'Lil\' Homie has gone to a better place.',
+  'Lil\' Homie has kicked the bucket.',
+  'Lil\' Homie has met their maker.',
+  'Lil\' Homie has shuffled off this mortal coil.',
+  'Lil\' Homie is food for worms.',
+  'Lil\' Homie is pushing up daisies.',
+  'Lil\' Homie is six feet under.',
+  'Lil\' Homie sleeps with the fishes.'
+];
 
 export class App extends React.Component {
 
   constructor(props) {
     super(props);
     this.state = {
+
       theLilHomie: {
         name: 'Lil\' Homie',
         alive: true,
@@ -18,6 +32,7 @@ export class App extends React.Component {
         hunger: 100,
         fun: 100,
         className: 'alive',
+        deathMessage: ''
       }
     };
     this.increaseHomieStats = this.increaseHomieStats.bind(this);
@@ -45,6 +60,7 @@ export class App extends React.Component {
       newHomie.fun = 0;
       newHomie.sleep = 0;
       newHomie.hunger = 0;
+      newHomie.deathMessage = DEATH[Math.floor(Math.random()*9)];
       clearInterval(this.slowlyKillLilHomie);
     }
     this.setState({theLilHomie: newHomie});
@@ -65,6 +81,8 @@ export class App extends React.Component {
           </Row>
 
         </Grid>
+        <DeathText homie={this.state.theLilHomie}
+          deathOptions={this.state.deathMessages}/>
         <Buttons onIncreaseStats={this.increaseHomieStats}/>
 
         <style jsx>{`
