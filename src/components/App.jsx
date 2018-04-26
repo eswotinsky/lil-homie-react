@@ -4,6 +4,7 @@ import { Switch, Route } from 'react-router-dom';
 import HomieDisplay from './HomieDisplay';
 import HomieStats from './HomieStats';
 import Buttons from './Buttons';
+import DressUp from './DressUp';
 import { Grid, Row, Cell } from 'react-inline-grid';
 
 export class App extends React.Component {
@@ -24,6 +25,7 @@ export class App extends React.Component {
     };
     this.increaseHomieStats = this.increaseHomieStats.bind(this);
     this.decrementHomieStats = this.decrementHomieStats.bind(this);
+    this.handleHatClick = this.handleHatClick.bind(this);
   };
 
   increaseHomieStats(stat) {
@@ -51,6 +53,14 @@ export class App extends React.Component {
       this.setState({theLilHomie: newHomie});
   }
 
+  handleHatClick(hat) {
+    let newHomie = Object.assign({}, this.state.theLilHomie);
+    if (newHomie.alive == true){
+      newHomie.className = hat;
+    }
+    this.setState({theLilHomie: newHomie});
+  }
+
   componentDidMount(){
     this.slowlyKillLilHomie = setInterval(this.decrementHomieStats, 50);
   }
@@ -67,7 +77,7 @@ export class App extends React.Component {
 
         </Grid>
         <Buttons onIncreaseStats={this.increaseHomieStats}/>
-
+        <DressUp onHatClick={this.handleHatClick}/>
         <style jsx>{`
             #cellDisplay{
               margin-left: 20vw;
