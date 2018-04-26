@@ -29,7 +29,7 @@ export class App extends React.Component {
   increaseHomieStats(stat) {
     let newHomie = Object.assign({}, this.state.theLilHomie);
     if (this.state.theLilHomie.alive) {
-      newHomie[stat] += 10;
+      newHomie[stat] += 6;
       newHomie[stat] = (newHomie[stat] > 100) ? 100 : newHomie[stat];
     }
     // console.log("This is the homie alive:" + this.state.theLilHomie.alive);
@@ -38,9 +38,9 @@ export class App extends React.Component {
 
   decrementHomieStats() {
     let newHomie = Object.assign({}, this.state.theLilHomie);
-    newHomie.fun -= 5;
-    newHomie.sleep -= 5;
-    newHomie.hunger -= 5;
+    newHomie.fun -= .34;
+    newHomie.sleep -= .34;
+    newHomie.hunger -= .34;
     if (newHomie.fun <= 0 || newHomie.sleep <= 0 || newHomie.hunger <= 0) {
       newHomie.alive = false;
       newHomie.className = "dead";
@@ -52,7 +52,7 @@ export class App extends React.Component {
   }
 
   componentDidMount(){
-    this.slowlyKillLilHomie = setInterval(this.decrementHomieStats, 300);
+    this.slowlyKillLilHomie = setInterval(this.decrementHomieStats, 50);
   }
 
   render() {
