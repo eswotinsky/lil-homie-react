@@ -18,7 +18,7 @@ function Buttons(props) {
         .btn {
           border: 2px solid black;
           box-shadow: 0px 0px 25px firebrick;
-          font-size: 25px;
+          font-size: 2.75vw;
           font-family: chalkduster;
           color: white;
           background-color: tomato;

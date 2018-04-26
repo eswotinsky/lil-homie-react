@@ -3,7 +3,6 @@ import lilHomie from '../assets/images/lil-homie.jpg';
 import Tombstone from '../assets/images/tombstone.jpg';
 import PropTypes from 'prop-types';
 
-
 function HomieDisplay(props){
   return (
     <div className={props.homie.className}>
@@ -28,7 +27,6 @@ function HomieDisplay(props){
     </div>
   );
 }
-
 
 HomieDisplay.propTypes = {
   homie: PropTypes.object
