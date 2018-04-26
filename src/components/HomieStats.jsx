@@ -1,32 +1,37 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-function HomieStats(){
+function HomieStats(props){
   return(
-    <div className="statsContainer">
-      <progress max="100" value="100" id="sleepMeter"></progress>
-      <br/>
-      <progress max="100" value="100" id="hungerMeter"></progress>
-      <br/>
-      <progress max="100" value="100" id="funMeter"></progress>
+  <div className="statsContainer">
+    <h1>Sleep</h1>
+    <progress max="100" value={props.homie.sleep} id="sleepMeter"></progress>
+    <br/>
+    <h1>Hunger</h1>
+    <progress max="100" value={props.homie.hunger} id="hungerMeter"></progress>
+    <br/>
+    <h1>Fun</h1>
+    <progress max="100" value={props.homie.fun} id="funMeter"></progress>
+  <style jsx>{`
+    div.statsContainer{
+      height: 30vh;
+      width: 30vw;
+      border: 5px solid black;
+      background-color: tomato;
+    }
+    progress {
+      position: relative;
+      left:15%;
+      width: 70%;
+    }
+  `}
+  </style>
+</div>
+  )
+}
 
-      <style jsx>{`
-          div.statsContainer{
-            height: 30vh;
-            width: 30vw;
-            border: 5px solid black;
-            background-color: tomato;
-          }
-          progress {
-            position: relative;
-            left:15%;
-            width: 70%;
-            height: 20%;
-          }
+HomieStats.propTypes = {
+  homie: PropTypes.object
+}
 
-          `}
-        </style>
-      </div>
-    );
-  }
-
-  export default HomieStats;
+export default HomieStats;
