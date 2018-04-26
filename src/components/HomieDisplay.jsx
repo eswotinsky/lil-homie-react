@@ -9,18 +9,17 @@ function HomieDisplay(){
       <style jsx>{`
           img{
 
-            border: 4px solid black;
+            border: 5px solid black;
             height: 30vh;
             width: 30vw;
             background-color: tomato;
 
           }
 
+          `}
+        </style>
+      </div>
+    );
+  }
 
-        `}
-      </style>
-    </div>
-  );
-}
-
-export default HomieDisplay;
+  export default HomieDisplay;
