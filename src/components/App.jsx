@@ -9,18 +9,16 @@ import { Grid, Row, Cell } from 'react-inline-grid';
 
 export class App extends React.Component {
 
-  slowlyKillLilHomie: null
-
   constructor(props) {
     super(props);
     this.state = {
       theLilHomie: {
-        name: "Lil' Homie",
+        name: 'Lil\' Homie',
         alive: true,
         sleep: 100,
         hunger: 100,
         fun: 100,
-        className: "alive",
+        className: 'alive',
       }
     };
     this.increaseHomieStats = this.increaseHomieStats.bind(this);
@@ -45,12 +43,13 @@ export class App extends React.Component {
     newHomie.hunger -= .34;
     if (newHomie.fun <= 0 || newHomie.sleep <= 0 || newHomie.hunger <= 0) {
       newHomie.alive = false;
-      newHomie.className = "dead";
+      newHomie.className = 'dead';
       newHomie.fun = 0;
       newHomie.sleep = 0;
       newHomie.hunger = 0;
+      clearInterval(this.slowlyKillLilHomie);
     }
-      this.setState({theLilHomie: newHomie});
+    this.setState({theLilHomie: newHomie});
   }
 
   handleHatClick(hat) {
@@ -84,11 +83,11 @@ export class App extends React.Component {
               background-color: tomato;
             }
             `}
-          </style>
-        </div>
-      );
-    }
+        </style>
+      </div>
+    );
   }
+}
 
 
-  export default App;
+export default App;

@@ -7,14 +7,24 @@ function Header(){
           div {
             background-color:tomato;
             color:white;
-            text-align: center;
+
             margin-right: 19.4%;
             height: 12vh;
             margin-left: 16.4%;
             margin-top: 5%;
-            font-family: chalkduster;
-            font-size: 2.25vw;
+
+
             padding: 2%;
+          }
+          .titleText{
+            text-align: center;
+            font-size: 5vw;
+            font-family: chalkduster;
+            margin-right: 5vw;
+            margin-left: 5vw;
+            margin-bottom: 5vh;
+            margin-top: 3vh;
+
           }
           @keyframes rainbow {
             12.5% {
@@ -48,7 +58,7 @@ function Header(){
           }
           `}
       </style>
-      <h1>Homie Simulator</h1>
+      <h1 className="titleText">Homie Simulator</h1>
     </div>
   );
 }
