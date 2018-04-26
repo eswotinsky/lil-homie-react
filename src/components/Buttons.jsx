@@ -1,12 +1,13 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-function Buttons() {
+function Buttons(props) {
 
   return(
     <div className="buttonContainer">
-      <button className="btn" id="foodButton">Feed</button>
-      <button className="btn" id="sleepButton">Sleep</button>
-      <button className="btn" id="playButton">Play</button>
+      <button className="btn" onClick={()=>props.onIncreaseStats('hunger')} id="foodButton">Feed</button>
+      <button className="btn" onClick={()=>props.onIncreaseStats('sleep')} id="sleepButton">Sleep</button>
+      <button className="btn" onClick={()=>props.onIncreaseStats('fun')} id="playButton">Play</button>
       <style jsx>{`
         div.buttonContainer {
           margin-left: 16.4%;
@@ -30,6 +31,10 @@ function Buttons() {
       `}</style>
     </div>
   );
+}
+
+Buttons.propTypes = {
+  onIncreaseStats: PropTypes.func
 }
 
 export default Buttons;

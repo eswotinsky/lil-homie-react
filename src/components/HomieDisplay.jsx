@@ -6,17 +6,18 @@ import PropTypes from 'prop-types';
 function HomieDisplay(props){
   return (
     <div>
-      <img src={lilHomie}/>
+      <img className={props.homie.className} src={lilHomie}/>
       <style jsx>{`
           img{
 
             border: 5px solid black;
             height: 30vh;
             width: 30vw;
-            background-color: tomato;
-
           }
 
+          img.dead {
+            filter: drop-shadow(10px 10px 10px orange) blur(10px);
+          }
           `}
         </style>
       </div>
