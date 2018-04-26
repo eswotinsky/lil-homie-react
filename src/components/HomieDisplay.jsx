@@ -1,8 +1,9 @@
 import React from 'react';
-import lilHomie from '../assets/images/lil-homie.jpg'
+import lilHomie from '../assets/images/lil-homie.jpg';
+import PropTypes from 'prop-types';
 
 
-function HomieDisplay(){
+function HomieDisplay(props){
   return (
     <div>
       <img src={lilHomie}/>
@@ -21,6 +22,10 @@ function HomieDisplay(){
       </style>
     </div>
   );
+}
+
+HomieDisplay.propTypes = {
+  homie: PropTypes.object
 }
 
 export default HomieDisplay;
